@@ -26,9 +26,9 @@ public class Member {
     private Date mUpdatedAt;
 
     private boolean isCoupon;
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name="cId")
-    private Coupon coupon;
+    List<Coupon> coupons = new ArrayList<>();
     @OneToMany
     List<Order> orders = new ArrayList<>();
 
